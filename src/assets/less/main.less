@@ -1,2 +1,143 @@
 // AngularJS specific styles (like ng-cloak)
 @import "angular-styles";
+
+
+
+//Colors
+@maincolor:#024f9f;
+@secundarycolor:#ff7351;
+@backgroundcolor:#e9ebee;
+@gris2:#d6d7d9;
+@gris3:#afafaf;
+@gris4:#777777;
+@barscolor:#4580c2;
+@menutextcolor:#7fa7cf;
+@darkblue:#43526e;
+
+small{color:@gris4;font-size:.7em;font-weight:bold;}
+hr{border-color:@gris2;}
+.header{background-color:@maincolor;
+	a{color:@menutextcolor;}
+	.navbar{
+		margin-bottom:0px;
+		.navbar-brand{color:#fff;}
+		.navbar-nav{
+			a{.transiciones;}
+			a:hover,a:active,a:focus{background-color:inherit;color:#a0d0ff;}
+			
+		}
+		.navbar-collapse{
+			.navbar-right{
+				img{height:22px;margin-right:10px;}
+			}
+		}
+	}
+}
+body{background-color:@backgroundcolor;letter-spacing:-0.3px;}
+.body{padding-top:10px;
+	.profile{
+		img{width: 40%;}
+		.profilemenu{
+			padding:0;
+			li{
+				list-style:none;
+				padding:5px;
+				a{ color:@gris4;font-weight:bold;}
+
+			}
+
+			li.active,li:hover{background-color:@gris2;
+				a{color:@barscolor;}
+			}
+		}
+		.escalas{
+			padding:0;
+			li{
+				list-style: none;padding: 3px 0;
+				p{color:@gris3;font-size:.7em;}
+			}
+		}
+	}
+	.dashboard{
+		.detallecompetencias{
+
+			.progress{
+				width:30%;display:inline-block;margin-bottom:0;
+				.progress-bar{background-color:@barscolor;}
+			}
+			.detalle_competencia{
+				padding:10px;border-bottom:solid 0.1em @backgroundcolor;
+				b{font-size:.8em;padding:0 20px;}
+			}
+		}
+
+		.panel{
+			h3{font-weight:800;font-size:.8em;}
+		}
+	}
+}
+b{color:@darkblue;}
+
+
+
+//mixins
+.cuadrado(@color: @maincolor){
+	height:15px;
+	width: 15px;
+	display:inline-block;
+	background-color:@color;
+
+}
+.botones(@fondo: @maincolor,@colortxt:@secundarycolor,@colorborde:@secundarycolor){
+	padding:10px 20px;
+	margin:0 5px;
+	border-radius:3px;
+	border:solid 0.1em;
+	font-size:.7em;
+	display: inline-block;
+	font-weight:bolder;
+	background-color:@fondo;
+	color:@colortxt;
+	border-color:@colorborde;
+	.transiciones;
+}
+.transiciones(@transicion: all ease .4s){
+	-webkit-transition:  @transicion;
+	   -moz-transition:  @transicion;
+	    -ms-transition:  @transicion;
+	     -o-transition:  @transicion;
+	        transition:  @transicion;
+}
+
+.mainbtn{
+	.botones(@secundarycolor,#fff,@secundarycolor);
+}
+.mainbtn:hover{
+	.botones(transparent,@secundarycolor,@secundarycolor);
+}
+.secondbtn{
+	.botones(@gris2,#656c7a,@gris2);
+}
+.secondbtn:hover{
+	.botones(#656c7a,@gris2,@gris2);
+}
+
+.cuadrado1{
+	.cuadrado(#ff5f3b);
+}
+.cuadrado2{
+	.cuadrado(#ffda3e);
+}
+.cuadrado3{
+	.cuadrado(#93d753);
+}
+.cuadrado4{
+	.cuadrado(#67baef);
+}
+.cuadrado5{
+	.cuadrado(@barscolor);
+}
+
+
+
+a:hover{text-decoration:none;}

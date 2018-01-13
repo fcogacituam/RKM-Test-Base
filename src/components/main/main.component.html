@@ -5,9 +5,10 @@
 	<title>Reporte</title>
 
 	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="src/assets/css/main.css">
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid header">
 		<nav class="navbar">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -27,18 +28,174 @@
 						<li><a href=""><i class="fas fa-key"></i>   Accesos y permisos</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
+	
+
 						<li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fabian
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#"><i class="fas fa-sign-out-alt"></i>   Logout</a></li>
-        </ul>
-      </li>
+
+					        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/src/assets/images/profile.jpg" alt="profile img" class="img-circle">Fabian
+					        <span class="caret"></span></a>
+					        <ul class="dropdown-menu">
+					          <li><a href="#"><i class="fas fa-sign-out-alt"></i>   Logout</a></li>
+					        </ul>
+					     </li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</div>
+
+	<div class="container-fluid body">
+		<!-- 
+		
+		<div class="cuadrado3"></div>
+		<div class="cuadrado4"></div>
+		<div class="cuadrado5"></div>
+		<a href="" class="mainbtn">Hola</a> -->
+		<div class="row">
+			<div class="col-md-6 text-left">
+				<a href="" class="secondbtn"><i class="fas fa-long-arrow-alt-left "></i></a> <b>Reporte individual de resultados</b>
+			</div>
+			<div class="col-md-6 text-right">
+				<a href="" class="secondbtn"><i class="fas fa-download"></i>   Descargar Reporte en PDF</a>
+				<a href="" class="mainbtn">Crear nuevo plan de acción</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<hr>
+				<div class="col-md-2 profile">
+					<img src="/src/assets/images/profile.jpg" alt="profile img" class="img-circle img-responsive">
+					<h2><b>John <br>Doe</b></h2>
+					<ul class="profilemenu">
+						<li class="active"><a href="">Resumen</a></li>
+						<li><a href="">Competencias</a></li>
+						<li><a href="">Planes de acción</a></li>
+					</ul>
+					<hr>
+					<small>Escalas</small>
+					<ul class="escalas">
+						<li>
+							<div class="cuadrado1"></div> Insuficiente <p>(Entre 1,0 y 2,5)</p>
+						</li>
+						<li>
+							<div class="cuadrado2"></div> Bajo lo Esperado <p>(Entre 2,5 y 3,0)</p>
+						</li>
+						<li>
+							<div class="cuadrado3"></div> Dentro de lo Esperado <p>(Entre 3,0 y 3,8)</p>
+						</li>
+						<li>
+							<div class="cuadrado4"></div> Sobre lo Esperado <p>(Entre 3,8 y 4,5)</p>
+						</li>
+						<li>
+							<div class="cuadrado5"></div> Excepcional <p>(Entre 4,5 y 5,0)</p>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-10 dashboard">
+					<div class="col-md-4">
+						<div class="col-md-12 panel">
+							<h3>Promedio general de desempeño</h3>
+						</div>
+					</div>
+					<div class="col-md-4 ">
+						<div class="col-md-12 panel">
+							<h3>Promedio de competencias</h3>
+						</div>
+					</div>
+					<div class="col-md-4 ">
+						<div class="col-md-12 panel">
+							<h3>Detalle de evaluación</h3>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="col-md-12 panel detallecompetencias">
+							<h3>Promedio de competencias</h3>
+							<div class="col-md-12 detalle_competencia">
+								<div class="col-md-11 text-center">
+									<b>Capacidad de Planificación y Organización</b>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="5"
+										  aria-valuemin="0" aria-valuemax="5" style="width:100%">
+										  
+										  </div>
+										</div>
+										<b>5,0 Pts</b> Excepcional
+								</div>
+								<div class="col-md-1">
+									<a href=""><i class="fas fa-angle-down" data-toggle="collapse" data-target="#planiforg"></i></a>
+								</div>
+								<div id="planiforg" class="collapse col-md-12">
+									Lorem ipsum dolor text....
+								</div>
+							</div>
+							<div class="col-md-12 detalle_competencia">
+								<div class="col-md-11">
+										Planificacion y asdsad
+								</div>
+								<div class="col-md-1">
+									<a href=""><i class="fas fa-angle-down" data-toggle="collapse" data-target="#cliente"></i></a>
+								</div>
+								<div id="cliente" class="collapse">
+									Lorem ipsum dolor text....
+								</div>
+							</div>
+							<div class="col-md-12 detalle_competencia">
+								<div class="col-md-11">
+										Planificacion y asdsad
+								</div>
+								<div class="col-md-1">
+									<a href=""><i class="fas fa-angle-down" data-toggle="collapse" data-target="#ejecucion"></i></a>
+								</div>
+								<div id="ejecucion" class="collapse">
+									Lorem ipsum dolor text....
+								</div>
+							</div>
+							<div class="col-md-12 detalle_competencia">
+								<div class="col-md-11">
+										Planificacion y asdsad
+								</div>
+								<div class="col-md-1">
+									<a href=""><i class="fas fa-angle-down" data-toggle="collapse" data-target="#relhumanas"></i></a>
+								</div>
+								<div id="relhumanas" class="collapse">
+									Lorem ipsum dolor text....
+								</div>
+							</div>
+							<div class="col-md-12 detalle_competencia">
+								<div class="col-md-11">
+										Planificacion y asdsad
+								</div>
+								<div class="col-md-1">
+									<a href=""><i class="fas fa-angle-down" data-toggle="collapse" data-target="#comefi"></i></a>
+								</div>
+								<div id="comefi" class="collapse">
+									Lorem ipsum dolor text....
+								</div>
+							</div>
+							<div class="col-md-12 detalle_competencia">
+								<div class="col-md-11">
+										Planificacion y asdsad
+								</div>
+								<div class="col-md-1">
+									<a href=""><i class="fas fa-angle-down" data-toggle="collapse" data-target="#presiontrab"></i></a>
+								</div>
+								<div id="presiontrab" class="collapse">
+									Lorem ipsum dolor text....
+								</div>
+							</div>
+									
+								
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+
+	</div>
+	
 
 </body>
 </html>
