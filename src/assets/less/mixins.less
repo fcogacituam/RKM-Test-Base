@@ -1,0 +1,78 @@
+
+
+//mixins
+
+.cuadrado(@color: @maincolor){
+	height:15px;
+	width: 15px;
+	display:inline-block;
+	background-color:@color;
+
+}
+.botones(@fondo: @maincolor,@colortxt:@secundarycolor,@colorborde:@secundarycolor){
+	padding:4px 14px;
+	margin:0 5px;
+	border-radius:2px;
+	border:solid 0.1em;
+	font-size:.7em;
+	display: inline-block;
+	font-weight:bolder;
+	background-color:@fondo;
+	color:@colortxt;
+	border-color:@colorborde;
+	.transiciones;
+}
+.transiciones(@transicion: all ease .4s){
+	-webkit-transition:  @transicion;
+	   -moz-transition:  @transicion;
+	    -ms-transition:  @transicion;
+	     -o-transition:  @transicion;
+	        transition:  @transicion;
+}
+.animaciones(@animation){
+	-webkit-animation:@animation;
+	-o-animation:@animation ;
+	animation:@animation ;
+}
+.transformaciones(@transform){
+	-webkit-transform: @transform;
+	   -moz-transform: @transform;
+	    -ms-transform: @transform;
+	     -o-transform: @transform;
+	        transform: @transform;
+}
+
+
+
+
+
+
+
+
+// Donut Progress bar mixins
+.donut_container(@altotexto,@porteletra,@puntos){
+	text-align:center;
+    position: absolute;
+    line-height:@altotexto;
+    width: 100%;
+    font-size:@porteletra!important;
+    .colortexto(@puntos);
+}
+
+
+//draw and paint the progress bar according to the @puntos parameter
+.donutchart(@radio,@anchoborde,@puntos){
+	@perimetro: ceil(2*3.14*@radio);
+	@porcentaje: (@puntos*100)/5;
+	@porcion: (@perimetro*@porcentaje)/100;
+	cy:50%;
+	cx:50%;
+	fill:none;
+	r:@radio;
+	.colorchart(@puntos);
+	stroke-width:@anchoborde;
+	stroke-dasharray:@perimetro;
+	stroke-dashoffset:@perimetro - @porcion;
+
+
+}

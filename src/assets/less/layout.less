@@ -1,0 +1,204 @@
+
+
+.mainbtn{
+	.botones(@secundarycolor,#fff,@secundarycolor);
+}
+.mainbtn:hover{
+	.botones(transparent,@secundarycolor,@secundarycolor);
+}
+.secondbtn{
+	.botones(@gris2,#656c7a,@gris2);
+}
+.secondbtn:hover{
+	.botones(#656c7a,@gris2,@gris2);
+}
+
+.cuadrado1{
+	.cuadrado(@insuficiente);
+}
+.cuadrado2{
+	.cuadrado(@bajoesperado);
+}
+.cuadrado3{
+	.cuadrado(@dentroesperado);
+}
+.cuadrado4{
+	.cuadrado(@sobreesperado);
+}
+.cuadrado5{
+	.cuadrado(@excepcional);
+}
+
+
+
+//Layout
+
+
+small{color:@gris4;font-size:.7em;font-weight:bold;}
+hr{border-color:@gris2;}
+.header{background-color:@maincolor;
+	a{color:@menutextcolor;}
+	.navbar{
+		margin-bottom:0px;
+		.navbar-brand{color:#fff;}
+		.navbar-header{
+			.icon-bar{background-color:#fff;}
+		}
+		.navbar-nav{
+			a{.transiciones;}
+			a:hover{background-color:inherit;color:#a0d0ff;}
+			
+		}
+		.navbar-collapse{
+			.navbar-right{
+				a.dropdown-toggle{color:#fff;font-weight:bold;}
+				img{height:22px;margin-right:10px;}
+				a:hover,a:focus,a:visited{background-color:inherit;}
+			}
+		}
+	}
+}
+body{background-color:@backgroundcolor;letter-spacing:-0.3px;color:@gris4;}
+.body{padding-top:10px;
+	.profile{
+		img{width: 40%;.transiciones();}
+		img:hover{.transformaciones(scale(1.2));}
+		.profilemenu{
+			padding:0;
+			li{
+
+				list-style:none;
+				padding:5px;
+				.transiciones(all ease .4s);
+				a{ color:@gris4;}
+
+			}
+
+			li.active,li:hover{background-color:@gris2;
+				a{color:@barscolor;}
+			}
+		}
+		.escalas{
+			padding:0;
+			li{
+				list-style: none;padding: 3px 0;font-size:.8em;
+				p{color:@gris3;font-size:.8em;}
+			}
+		}
+	}
+	.dashboard{
+		.up-panels{min-height:250px;}
+		.detallecompetencias{
+
+			.progress{
+				width:100%;display:inline-block;margin-bottom:0;
+				.progress-bar{background-color:@barscolor;}
+			}
+			.detalle_competencia{
+				padding:10px;border-bottom:solid 0.1em @backgroundcolor;
+				b{font-size:.8em;padding:0 20px;}
+				.collapse{
+					padding:40px 0;
+				}
+			}
+		}
+
+		.panel{
+			color:@gris3;font-size:.9em;
+			h2{font-weight:800;font-size:.9em;color:@gris4;}
+			h4{color:@gris4;font-weight:bold;margin:2px 0;}
+			h5{color:@gris3;font-weight:bold;font-size:.9em;margin-bottom:0;margin:2px 0;}
+			small{
+				color:@gris3;
+			}
+		}
+		.panels2{
+			h5{font-size:.8em;}
+			h4{font-size:.9em;}
+		}
+		.panels2 .progress,.panels3 .progress{margin-bottom:5px;height:11px;
+			.progress-bar{
+				height:11px;
+				}
+			}
+	}
+}
+b{color:@darkblue;}
+
+a:hover{text-decoration:none;}
+
+.donutContainer,.donutContainer2 {
+    position: relative;
+    display:block;
+
+}
+
+
+
+
+
+
+svg {
+	margin:auto;
+	display:block;
+    .transformaciones(rotate(-90deg));
+}
+
+
+
+
+//Paint the progress bar
+.colorchart(@puntos) when (@puntos >= 4.5) and (@puntos < 5.1){
+	stroke:@excepcional;
+}
+.colorchart(@puntos) when (@puntos >= 3.8) and (@puntos < 4.5){
+	stroke:@sobreesperado;
+}
+.colorchart(@puntos) when (@puntos >= 3.0) and (@puntos < 3.8){
+	stroke:@dentroesperado;
+}
+.colorchart(@puntos) when (@puntos >= 2.5) and (@puntos < 3.0){
+	stroke:@bajoesperado;
+}
+.colorchart(@puntos) when (@puntos >= 1.0) and (@puntos < 2.5){
+	stroke:@insuficiente;
+}
+
+//Paint the text inside the progress bar
+.colortexto(@puntos) when (@puntos >= 4.5) and (@puntos < 5.1){
+	color:@excepcional!important;
+}
+.colortexto(@puntos) when (@puntos >= 3.8) and (@puntos < 4.5){
+	color:@sobreesperado!important;
+}
+.colortexto(@puntos) when (@puntos >= 3.0) and (@puntos < 3.8){
+	color:@dentroesperado!important;
+}
+.colortexto(@puntos) when (@puntos >= 2.5) and (@puntos < 3.0){
+	color:@bajoesperado!important;
+}
+.colortexto(@puntos) when (@puntos >= 1.0) and (@puntos < 2.5){
+	color:@insuficiente!important;
+}
+
+
+
+
+//First progress bar
+.donutContainer h2 {
+    .donut_container(110px,1.6em,5.0);
+}
+circle#circle{
+	.donutchart(60,0.8em,5.0);
+}
+
+
+
+//Second progress bar
+.donutContainer2 h2{
+    .donut_container(60px,1.0em,5.0);
+} 
+circle#circle2{
+	.donutchart(40,0.5em,5.0);
+	
+}
