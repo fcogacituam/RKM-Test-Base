@@ -298,42 +298,26 @@ svg {
   transform: rotate(-90deg);
 }
 circle#circle {
-  stroke: #4580c2;
-  stroke-width: .8em;
+  cy: 50%;
+  cx: 50%;
   fill: none;
+  r: 60;
+  stroke: inherit;
+  stroke-width: 0.8em;
+  stroke-dashoffset: 0;
+  stroke: red!important;
+  stroke-dasharray: 377;
 }
 circle#circle2 {
-  stroke: #4580c2;
-  stroke-width: .5em;
+  cy: 50%;
+  cx: 50%;
   fill: none;
-}
-.donut {
-  stroke-dasharray: 377;
-  -webkit-animation: donut 1s linear;
-  -o-animation: donut 1s linear;
-  animation: donut 1s linear;
-}
-.donut2 {
+  r: 40;
+  stroke: inherit;
+  stroke-width: 0.5em;
+  stroke-dashoffset: 50.400000000000006;
+  stroke: red!important;
   stroke-dasharray: 252;
-  -webkit-animation: donut2 1s linear;
-  -o-animation: donut2 1s linear;
-  animation: donut2 1s linear;
-}
-@keyframes donut {
-  from {
-    stroke-dashoffset: 377;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes donut2 {
-  from {
-    stroke-dashoffset: 252;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
 }
 
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

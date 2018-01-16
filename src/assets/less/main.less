@@ -191,6 +191,8 @@ a:hover{text-decoration:none;}
 
 }
 
+
+
 .donutContainer h2 {
     text-align:center;
     position: absolute;
@@ -213,39 +215,35 @@ svg {
 	display:block;
     .transformaciones(rotate(-90deg));
 }
-circle#circle{
-	stroke:@barscolor;
-	stroke-width:.8em;
+
+.donutchart(@radio,@anchoborde,@puntos){
+	@perimetro: ceil(2*3.14*@radio);
+	@porcentaje: (@puntos*100)/5;
+	@porcion: (@perimetro*@porcentaje)/100;
+	cy:50%;
+	cx:50%;
 	fill:none;
+	r:@radio;
+	stroke:inherit;
+	stroke-width:@anchoborde;
+	stroke-dasharray:@perimetro;
+	stroke-dashoffset:@perimetro - @porcion;
+	.colorchart(@puntos);
+	
+
+
+}
+
+
+.colorchart(@puntos) when (@puntos >= 4.0) and (@puntos < 5.1){
+	stroke:red!important;
+}
+circle#circle{
+	.donutchart(60,0.8em,5.0);
 }
 circle#circle2{
-	stroke:@barscolor;
-	stroke-width:.5em;
-	fill:none;
-}
-.donut {
-  stroke-dasharray: 377;
-  .animaciones(donut 1s linear);
+	.donutchart(40,0.5em,1.0);
+	
 }
 
-.donut2{
-	stroke-dasharray: 252;
-  .animaciones(donut2 1s linear);
-}
 
-@keyframes donut {
-  from {
-    stroke-dashoffset: 377;
-  }
-  to{
-  	stroke-dashoffset: 0;
-  }
-}
-@keyframes donut2 {
-  from {
-    stroke-dashoffset: 252;
-  }
-  to{
-  	stroke-dashoffset: 0;
-  }
-}
